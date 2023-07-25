@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    max-width: 600px;
+    margin: 0 auto;
+    color: rgb(71, 77, 83);
+}
+.container {
+    min-height: 500px;
+    margin: 50px;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game {
+    text-align: center;
+    margin: 50px;
+    color: #454545;
+    position: relative;
+}
+.tictactoe {
+    margin: 50px;
+}
+.cell{
+    background-color: rgba(79, 146, 231, 0.75);
+    border-radius: 10px;
+    color: white;
+    /*border:1px solid rgb(187, 177, 177);*/
+    min-width: 100px; /* 정사각형 유지 */
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    -webkit-animation: fadein 2s;
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.cell:hover {
+    background-color: rgba(79, 146, 231);
+}
+
+#play {
+    font-size: 17px;
+    font-weight: bold;
+    width: 150px; height: 40px;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: rgb(71, 77, 83);
+    color: white;
+    transition: all 0.5s linear;
+}
+
+#play:hover {
+    transform: scale(1.07);
+}
+
+.winner {
+    /*border: 1px solid black;*/
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+    width: 200px;
+    line-height: 70px;
+    height: 70px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    z-index: 1000;
+}
+
+.player {
+    width: 43.5%;
+    height: 40px;
+    float: left;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    line-height: 20px;
+    justify-content: center;
+}
+
+.active {
+    background-color: rgb(71, 77, 83, 0.25);
+}
